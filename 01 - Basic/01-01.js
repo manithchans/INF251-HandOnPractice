@@ -6,10 +6,21 @@ Current time is :  PM :  :
 
 "use strict";
 
-(function getCurrentDay() {
-   
-})();
+var today = new Date();
 
-(function getCurrentTime() {
-    
-})();         
+function getCurrentDay() {
+    var day = today.getDay();
+    var listOfDay = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+   return listOfDay[day];
+};
+
+function getCurrentTime() {
+    var hour = today.getHours();
+    var minute = today.getMinutes();
+    var shift = hour < 12 ? "AM" : "PM";
+    return `${hour}:${minute} ${shift}`;
+};         
+
+
+console.log("Today is :", getCurrentDay());
+console.log("Current time is :", getCurrentTime());
