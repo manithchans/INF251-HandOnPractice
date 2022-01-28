@@ -16,3 +16,19 @@ Range 	Grade
 <100 	A 
 */
 
+function findGrade(name, score){
+    var grade;
+    if (score <60) grade = "F";
+    else if (score<70) grade = "D";
+    else if (score<80) grade = "C";
+    else if (score<90) grade = "B";
+    else grade = "A";
+
+    console.log(`${name} ${score}        ${grade}`);
+}
+console.log("Name    Marks     Grade");
+findGrade("David  ",80);
+findGrade("Vinoth ",77);
+findGrade("Divya  ",88);
+findGrade("Ishitha",95);
+findGrade("Thomas ",68);

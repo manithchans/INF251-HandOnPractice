@@ -7,10 +7,19 @@ Expected Output : 5
 "use strict";
 (function () {
     function countVowels(pickedSentence) {
-       
-            }
-        }
-        
+
+        const vowels = ["a", "e", "i", "o", "u"];
+        let count = 0;
+        for (let letter of pickedSentence.toLowerCase())
+            if (vowels.includes(letter))
+                count++;
+
+        return count;
     }
-   
-})
+
+    console.log(countVowels("AUPP"));
+    console.log(countVowels("Manith"));
+    console.log(countVowels("Front End Web Development"));
+
+
+})();

@@ -6,9 +6,10 @@ Expected Output : 'The Quick Brown Fox '
 "use strict";
 (function () {
     function capitalise(pickedSentence) {
-       
-        }
-       
+        return pickedSentence.toUpperCase();
     }
-    
-})
+
+    console.log(capitalise("hello"));
+    console.log(capitalise("aupp"));
+    console.log(capitalise("manith"));
+})();

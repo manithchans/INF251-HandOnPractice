@@ -7,8 +7,11 @@ Assume punctuation and numbers symbols are not included in the passed string.
 "use strict";
 (function () {
     function sorter(pickedWord) {
-       
+        var newArr = pickedWord.split("");
+        var result = newArr.sort().join("");
+        return result;
     }
+    console.log("Original String: FrontEndWebDevelopment");
+    console.log(sorter("FrontEndWebDevelopment"));
 
-   
-})
+})();

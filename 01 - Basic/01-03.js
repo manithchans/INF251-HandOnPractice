@@ -10,7 +10,7 @@ var mm = today.getMonth()+1;
 var dd = today.getDate();
 var yy = today.getFullYear();
 
-console.log("mm-dd-yyyy: ",mm,"-",dd,"-",yy);
-console.log("mm/dd/yyyy: ",mm,"/",dd,"/",yy);
-console.log("dd-mm-yyyy: ",dd,"-",mm,"-",yy);
-console.log("dd/mm/yyyy: ",dd,"/",mm,"/",yy);
+console.log(`mm-dd-yyyy: ${mm}-${dd}-${yy}`);
+console.log(`mm/dd/yyyy: ${mm}/${dd}/${yy}`);
+console.log(`dd-mm-yyyy: ${dd}-${mm}-${yy}`);
+console.log(`dd/mm/yyyy: ${dd}-${mm}-${yy}`);

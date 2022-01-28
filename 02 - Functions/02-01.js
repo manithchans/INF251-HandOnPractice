@@ -5,8 +5,7 @@ Expected Output : 34223
 */
 "use strict";
 (function (pickedNumber) {
-   
-    }
-    
-
+    pickedNumber = pickedNumber + "";
+    console.log(`Original: ${pickedNumber}`);
+	console.log(`Reversed: ${pickedNumber.split("").reverse().join("")}`);
 })(32243);

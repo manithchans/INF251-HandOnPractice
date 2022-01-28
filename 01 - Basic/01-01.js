@@ -8,19 +8,16 @@ Current time is :  PM :  :
 
 var today = new Date();
 
-function getCurrentDay() {
+(function getCurrentDay() {
     var day = today.getDay();
     var listOfDay = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-   return listOfDay[day];
-};
+    console.log("Today is :", listOfDay[day]);
+})();
 
-function getCurrentTime() {
+(function getCurrentTime() {
     var hour = today.getHours();
-    var minute = today.getMinutes();
+    var minute = today.getMinutes() < 9 ? '0' + today.getMinutes() : today.getMinutes();
+    var second = today.getSeconds() < 9 ? '0' + today.getSeconds() : today.getSeconds();
     var shift = hour < 12 ? "AM" : "PM";
-    return `${hour}:${minute} ${shift}`;
-};         
-
-
-console.log("Today is :", getCurrentDay());
-console.log("Current time is :", getCurrentTime());
+    console.log(`Current time is: ${hour}:${minute}:${second} ${shift}`);
+})();         

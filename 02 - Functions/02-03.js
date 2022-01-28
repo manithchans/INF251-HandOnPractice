@@ -4,11 +4,14 @@ Example string : 'dog'
 Expected Output : d,do,dog,o,og,g
 */
 "use strict";
-(function () {
-    function wordMaker(word) {
-       
+(function wordMaker(word) {
+
+        let combinations = [];
+        for (let i = 0; i < word.length; i++) {
+            for (let j = i + 1; j < word.length + 1; j++) {
+                combinations.push(word.slice(i, j));
             }
         }
-    }
-    
-})
+        console.log(combinations);
+
+})("AUPP");
